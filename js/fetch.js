@@ -3,6 +3,7 @@ let timer;
 function changeHandler(countryName) {
     const mainDiv = document.getElementById('countries_container')
     mainDiv.innerHTML = ''
+    mainDiv.style.transform = "scaleY(0)"
     let result = ''
     clearTimeout(timer);
     timer = setTimeout(function () {
@@ -45,12 +46,12 @@ function changeHandler(countryName) {
                                    <div class="general-info-data">
                                        <div class="land-info">
                                            <h5 class="info">Land Area</h5>
-                                           <img src="../assets/area.png" alt="">
+                                           <img src="assets/area.png" alt="">
                                            <span class="light">${area?.toLocaleString() || '-'} sq km</span>
                                        </div>
                                        <div class="population-info">
                                            <h5 class="info">Population</h5>
-                                           <img src="../assets/people.png" alt="">
+                                           <img src="assets/people.png" alt="">
                                            <span class="light">${population?.toLocaleString() || '-'}</span>
                                        </div>
                                    </div>
@@ -91,6 +92,7 @@ function changeHandler(countryName) {
             result = '<p class="red">no country found</p>'
         }).then(newParamsObject => {
             mainDiv.innerHTML = result
+            mainDiv.style.transform = "scaleY(1)"
             window.gmapsInitialize = myMap.bind(null, newParamsObject);
             let script = document.createElement('script');
             script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCw4X71vls7i4k_nxhFdMusp_wpiVBCskE&callback=gmapsInitialize";
