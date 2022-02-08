@@ -1,0 +1,238 @@
+:root{
+    --dark-green: rgb(0, 59, 0);
+    --middle-green:rgb(0, 143, 17);
+    --light-green: rgb(0, 255, 65);
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e0f2f1;
+    background: url('assets/bg.jpg') center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: #616161;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+input,
+label {
+    width: 100%;
+    height: 3rem;
+    font-size: 1rem;
+}
+
+input {
+    border: 0;
+    border-bottom: 2px solid var(--dark-green);
+    outline: none;
+    transition: .2s ease-in-out;
+    box-sizing: border-box;
+    color: var(--middle-green);
+    background: rgba(0, 0, 0, .3);
+}
+
+label {
+    top: 0;
+    left: 0;
+    right: 0;
+    color: var(--dark-green);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    font-size: 1rem;
+    cursor: text;
+    transition: .2s ease-in-out;
+    box-sizing: border-box;
+}
+
+section {
+    margin-bottom: 20px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 350px;
+    border-radius: 0 0 2px 2px;
+    /*border: 1px solid var(--dark-green);*/
+    background-color: rgba(0,0,0, .5);
+}
+
+.input-container {
+    position: relative;
+}
+
+
+input:valid,
+input:focus {
+    border-bottom: 2px solid var(--light-green);
+}
+
+input:valid + label,
+input:focus + label {
+    color: var(--light-green);
+    font-size: .8rem;
+    top: -30px;
+    pointer-events: none;
+}
+
+.country-info {
+    width: 350px;
+    height: 600px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: mirrorflip 10s 0s linear infinite;
+    margin: 0 20px;
+}
+
+.header {
+    outline: 1px solid var(--dark-green);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.flag{
+    width: 30%;
+    border-top-left-radius: 20px;
+    background: red;
+}
+.flag img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 20px;
+}
+.country-name{
+    width: 68%;
+    color: var(--light-green);
+}
+.country-name p{
+    padding-top: 5px;
+    width: 100%;
+    text-align: center;
+}
+.general-info-data{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.land-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.land-info img {
+    width: 50px;
+    margin: 15px 0;
+}
+
+.population-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.population-info img{
+    margin: 15px 0;
+    width: 50px;
+    color: var(--middle-green);
+}
+.light{
+    color: var(--light-green);
+}
+.general-info{
+    outline: 1px solid var(--dark-green);
+    width: 100%;
+    height: 150px;
+}
+.map-container{
+    width: 100%;
+    height: 200px;
+    outline: 1px solid var(--dark-green);
+}
+.other-info{
+    width: 100%;
+    height: 200px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    outline: 1px solid var(--dark-green);
+}
+.left-info-container, .right-info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+span.label{
+    width: 100%;
+    color: var(--middle-green);
+    font-size: 10px;
+    padding-left: 15px;
+}
+span.value{
+    width: 100%;
+    color: var(--light-green);
+    line-height: 24px;
+    padding-left: 5px;
+    border-bottom: 1px solid var(--dark-green);
+}
+.left-info-container{
+    width: 50%;
+    height: 100%;
+    border-bottom-left-radius: 20px;
+    border-right: 5px dashed var(--dark-green);
+}
+.right-info-container{
+    width: 50%;
+    height: 100%;
+    border-bottom-right-radius: 20px;
+}
+h5.info{
+    width: 100%;
+    color: var(--middle-green);
+    text-align: center;
+    font-size: 16px;
+    padding-top: 5px;
+}
+.coat{
+    width: 30px;
+}
+
+
+canvas{
+    position: absolute;
+    opacity: 0.2;
+
+}
+#main_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+#countries_container{
+    display: flex;
+    flex-direction: row;
+}
+.red{
+    color: red;
+    font-size: 20px;
+    text-transform: capitalize;
+}
