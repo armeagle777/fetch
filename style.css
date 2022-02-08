@@ -109,7 +109,6 @@ input:focus + label {
 .flag{
     width: 30%;
     border-top-left-radius: 20px;
-    background: red;
 }
 .flag img{
     width: 100%;
