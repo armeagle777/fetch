@@ -12,6 +12,7 @@ function myMap({allIds,latlangs}) {
             disableDefaultUI: true,
             mapId: '9d77cb208122a347',
             panControl: false,
+            keyboardShortcuts: false,
             zoomControl: false,
             mapTypeControl: false,
             scaleControl: false,

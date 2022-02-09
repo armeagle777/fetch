@@ -238,3 +238,12 @@ canvas{
     font-size: 20px;
     text-transform: capitalize;
 }
+.gmnoprint a, .gmnoprint span {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
+}
+#GMapsID div div a div img{
+    display:none;
+}
